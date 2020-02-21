@@ -1,4 +1,4 @@
-#Solved: Linux Ubuntu open-vm-tools: GuestInfoGetDiskDevice: Missing disk device name; VMDK mapping unavailable for "/"
+# Solved: Linux Ubuntu open-vm-tools: GuestInfoGetDiskDevice: Missing disk device name; VMDK mapping unavailable for "/"
 
 After Upgrade from Ubuntu 16 LTS to Ubuntu 18 LTS the open VM-Ware tools write a lot of repeating warnings to the log dir and files like vmware-vmsvc-root.log.
 ```
