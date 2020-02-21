@@ -1,7 +1,7 @@
 #Solved: Linux Ubuntu open-vm-tools: GuestInfoGetDiskDevice: Missing disk device name; VMDK mapping unavailable for "/"
 
 After Upgrade from Ubuntu 16 LTS to Ubuntu 18 LTS the open VM-Ware tools write a lot of repeating warnings to the log dir and files like vmware-vmsvc-root.log.
-'''
+```
 [2020-02-21T07:04:23.751Z] [ warning] [guestinfo] GuestInfoGetDiskDevice: Missing disk device name; VMDK mapping unavailable for "/", fsName: "/dev/sda1"
 [2020-02-21T07:04:53.751Z] [ warning] [guestinfo] GuestInfoGetDiskDevice: Missing disk device name; VMDK mapping unavailable for "/", fsName: "/dev/sda1"
 [2020-02-21T07:05:23.754Z] [ warning] [guestinfo] GuestInfoGetDiskDevice: Missing disk device name; VMDK mapping unavailable for "/", fsName: "/dev/sda1"
@@ -19,7 +19,7 @@ After Upgrade from Ubuntu 16 LTS to Ubuntu 18 LTS the open VM-Ware tools write a
 [2020-02-21T07:11:23.761Z] [ warning] [guestinfo] GuestInfoGetDiskDevice: Missing disk device name; VMDK mapping unavailable for "/", fsName: "/dev/sda1"
 [2020-02-21T07:11:53.761Z] [ warning] [guestinfo] GuestInfoGetDiskDevice: Missing disk device name; VMDK mapping unavailable for "/", fsName: "/dev/sda1"
 [2020-02-21T07:12:23.761Z] [ warning] [guestinfo] GuestInfoGetDiskDevice: Missing disk device name; VMDK mapping unavailable for "/", fsName: "/dev/sda1"
-'''
+```
 
 **SOLVE and stop this repeating message:**
 
@@ -31,7 +31,7 @@ Better to change the controller to "VMware Paravirtual controller".
 
 Further change/edit the  file /etc/vmware-tools/tools.conf to this
 
-'''
+```
 [logging]
 log = true
 
@@ -50,14 +50,14 @@ vmusr.data = /var/log/vmusr.${USER}.log
 toolboxcmd.level = error
 toolboxcmd.handler = file
 toolboxcmd.data = /var/log/vmtoolboxcmd.log
-'''
+```
 
 (Read: https://kb.vmware.com/s/article/1007873)
 
 And do a
-'''
+```
  systemctl restart open-vm-tools
-'''
+```
 
 ############################################################
 
@@ -67,7 +67,7 @@ Keep this in mind - the this is **not a warning** - it is a debug info for devel
 
 Ubuntu 18 LTS uses 2:11.0.1 but the bug fix will come in in version 2:11.0.5
 
-'''
+```
 open-vm-tools (2:11.0.5-2) unstable; urgency=medium
 
   * [eab2f1a] Add vmtoolsd.service alias.
@@ -85,5 +85,5 @@ open-vm-tools (2:11.0.5-2) unstable; urgency=medium
     Thanks to Oliver Kurth (Closes: #950888)
 
  -- Bernd Zeimetz <bzed@debian.org>  Tue, 11 Feb 2020 15:56:51 +0100
-'''
+```
 (Read: http://metadata.ftp-master.debian.org/changelogs/main/o/open-vm-tools/unstable_changelog)
