@@ -86,4 +86,4 @@ open-vm-tools (2:11.0.5-2) unstable; urgency=medium
 
  -- Bernd Zeimetz <bzed@debian.org>  Tue, 11 Feb 2020 15:56:51 +0100
 ```
-(Read: http://metadata.ftp-master.debian.org/changelogs/main/o/open-vm-tools/unstable_changelog)
+(Read:  https://launchpad.net/ubuntu/+source/open-vm-tools or http://metadata.ftp-master.debian.org/changelogs/main/o/open-vm-tools/unstable_changelog)
