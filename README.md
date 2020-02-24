@@ -62,7 +62,7 @@ And do a
 ############################################################
 
 
-In Ubuntu 19 the bug will be fixed in vmware-tools by changing the priority from Warning to Debug! 
+In Ubuntu 19 (or a leter version) will fix this bug in the vmware-tools by changing the priority from Warning to Debug! 
 Keep this in mind - the this is **not a warning** - it is a debug info for developer. 
 
 Ubuntu 18 LTS uses 2:11.0.1 but the bug fix will come in in version 2:11.0.5
